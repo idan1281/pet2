@@ -46,6 +46,13 @@
 
     </properties>
 
+	<scm>
+		<connection>scm:git:git://github.wdf.sap.corp:c5213938/spring-petclinic.git</connection>
+		<developerConnection>scm:git:git@github.wdf.sap.corp:c5213938/spring-petclinic.git</developerConnection>
+		<url>https://github.wdf.sap.corp/c5213938/spring-petclinic</url>
+	  	<tag>HEAD</tag>
+  	</scm>
+
     <distributionManagement>
 	    <repository>
 	        <id>central</id>
