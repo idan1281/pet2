@@ -46,6 +46,17 @@
 
     </properties>
 
+    <distributionManagement>
+	    <repository>
+	        <id>central</id>
+	        <url>http://cd-artifactory.mo.sap.corp:8081/artifactory/libs-release</url>
+	    </repository>
+	    <snapshotRepository>
+	        <id>snapshots</id>
+	        <url>http://cd-artifactory.mo.sap.corp:8081/artifactory/libs-snapshot</url>
+	    </snapshotRepository>
+	</distributionManagement>
+
     <dependencyManagement>
         <!-- Import the maven Spring IO Platform Bill Of Materials (BOM) -->
         <dependencies>
