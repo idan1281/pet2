@@ -62,7 +62,6 @@ public class VisitController {
      * (Even though id is not part of the form fields)
      *
      * @param petId
-     *  petId
      * @return Pet
      */
     @ModelAttribute("visit")
