@@ -13,7 +13,7 @@ if [ ! -f "$path" ]
 then
   echo "file doesnt exists"
 else
-  ansible-playbook playbooks/launch_instance.yml --private-key "$path"
+  ansible-playbook playbooks/launch_instance.yml --private-key "$path" --ask-vault-pass
 fi
 
 git add -A inventories

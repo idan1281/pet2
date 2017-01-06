@@ -1,5 +1,0 @@
----
-# creds file
-ec2_access_key: "AKIAIFNNTXIO4BDZT3HQ"
-ec2_secret_key: "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"
-ansible_ssh_private_key_file: ~/.ssh/admin2.pem"
