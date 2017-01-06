@@ -1,8 +1,10 @@
-- hosts: dockerhosts
+- hosts: tag_Name_"{{ aws_instnce_name }}"
   remote_user: ec2-user
   sudo: yes
 
   tasks:
+    - include_vars: ../roles/vars/main.yml
+
     - name: Run the docker image created by the jenkins job
       docker_container:
         name: petclinic
