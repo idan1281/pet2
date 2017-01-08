@@ -4,8 +4,8 @@
 
   tasks:
 
-    - include_vars: ../roles/vars/secrets.yml
-    - include_vars: ../roles/vars/main.yml
+    - include_vars: vars/secrets.yml
+    - include_vars: vars/main.yml
 
     - name: Create security group
       ec2_group:

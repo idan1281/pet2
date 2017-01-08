@@ -3,7 +3,7 @@
   sudo: yeske
 
   tasks:
-    - include_vars: ../roles/vars/secrets.yml
+    - include_vars: vars/secrets.yml
 
     - name: Run the docker image created by the jenkins job
       docker_container:
