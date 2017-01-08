@@ -70,11 +70,6 @@
         groups: just_created
       with_items: "{{ ec2.instances }}"
 
-    - name: save IP to inventory file
-      copy: content="[dockerhosts]{{'\n'}}{{ item.public_ip }}" dest=../inventories/{{ inv_file }}
-      with_items: "{{ ec2.instances }}"
-
-
 - hosts: just_created
   remote_user: ec2-user
   sudo: yes
