@@ -53,7 +53,7 @@ If all you want is to automatically deploy the app and using the previous build 
 2. cd into the repo/ansible folder, e.g pet2/ansible4.	execute: 
 
 		./run_container.sh
-	 5.	Enter the full path for the SSH key you saved in the first clause6.	Enter the password for the Ansible vault ( tikal )
+	 5.	Enter the full path for the SSH key you saved in the first clause6.	Enter the password for the Ansible vault
 
 		If you encounter the error: 		ERROR! Attempted to execute "/etc/ansible/ec2.py" as inventory script: Inventory script (/etc/ansible/ec2.py) had an execution error: Traceback (most recent call last):		File "/etc/ansible/ec2.py", line 128, in <module>		import boto		ImportError: No module named boto		It means that your Ansible can’t find your boto installation. It can usually resolved by setting an env variable named PYTHONPATH for the “site-packages” location on which python is installed in. for example: 		export PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages 7.	run the script again
 
