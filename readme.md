@@ -31,7 +31,7 @@ This project allows you to use the CI/CD procecss for deploying the Spring-Petcl
 	*  change it’s permissions to 0400 ( chmod 0400 $File_path )3.	cd into the repo/ansible folder, e.g pet2/ansible4.	execute: 
 
 		./launch_docker_host.sh
-	 5.	Enter the full path for the SSH key you saved in the first clause6.	Enter the password for the Ansible vault ( tikal )
+	 5.	Enter the full path for the SSH key you saved in the first clause6.	Enter the password for the Ansible vault
 7. **save the server's IP address so for future accessing the app.**
 
 
