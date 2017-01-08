@@ -26,7 +26,7 @@ This project allows you to use the CI/CD procecss for deploying the Spring-Petcl
  
 >__Note__: If you don’t have an **/etc/ansible** folder please create one ( mkdir –p /etc/Ansible )
 
-#####	 Installing the docker host 
+####	 Installing the docker host 
 2.	Save the ssh key file provided in the email to the location of your choice 
 	*  change it’s permissions to 0400 ( chmod 0400 $File_path )3.	cd into the repo/ansible folder, e.g pet2/ansible4.	execute: 
 
