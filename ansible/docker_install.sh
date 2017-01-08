@@ -1,5 +1,5 @@
 #!/bin/sh
-read -p "Please enter the full path of the admin2.pem file : " path
+read -p "Please enter the full path of the tikal.pem file : " path
 
 #chec if path is not empty string
 echo  $path
