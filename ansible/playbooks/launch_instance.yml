@@ -91,3 +91,4 @@
       command: sh /home/ec2-user/docker_install.sh
       become: true
       become_user: root
+

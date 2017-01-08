@@ -5,7 +5,7 @@ aws_instance_type: "t2.micro"
 aws_image_id: "ami-1e299d7e"
 aws_keypair: "tikal"
 aws_wait_time: 500
-aws_instnce_name: "docker_ansible"
+aws_instnce_name: "docker_host"
 aws_vpc_subnet_id: "subnet-5026c519"
 aws_region: "us-west-2"
 inv_file: "dockerhost_inventory"

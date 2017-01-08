@@ -13,5 +13,6 @@ if [ ! -f "$path" ]
 then
   echo "file doesnt exists"
 else
+#Running the anisble playbook
   ansible-playbook playbooks/run_docker_image.yml  --private-key "$path" --ask-vault-pass
 fi

@@ -1,6 +1,6 @@
-- hosts: tag_Name_docker_ansible
+- hosts: tag_Name_docker_host
   remote_user: ec2-user
-  sudo: yes
+  sudo: yeske
 
   tasks:
     - include_vars: ../roles/vars/secrets.yml
@@ -11,3 +11,4 @@
         image: idan1281/petclinic
         published_ports: 8888:8080
         detach: true
+      register: docker_host

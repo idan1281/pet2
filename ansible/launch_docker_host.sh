@@ -13,9 +13,7 @@ if [ ! -f "$path" ]
 then
   echo "file doesnt exists"
 else
+
+# Running the Ansible playbook
   ansible-playbook playbooks/launch_instance.yml --private-key "$path" --ask-vault-pass
 fi
-
-git add -A inventories
-git commit -m "adding the docjerhost inventory file to Github"
-git git push origin master
