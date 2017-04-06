@@ -6,7 +6,7 @@ cp /var/lib/jenkins/.m2/repository/org/springframework/samples/spring-petclinic/
 cat <<EOF > /tmp/docker/Dockerfile
 FROM tomcat:8.0
 MAINTAINER "idan mishor <Idan1281@gmail.com>"/
-ADD target/*.war /usr/local/tomcat/webapps/
+ADD ./target/*.war /usr/local/tomcat/webapps/
 EOF
 
 # create the docker image
