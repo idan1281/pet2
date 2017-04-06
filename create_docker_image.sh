@@ -11,7 +11,7 @@ EOF
 
 # create the docker image
 cd /tmp/docker
-docker build -t idan1281/petclinic:${JOB_NAME}${BUILD_NUMBER}  -t idan1281/petclinic:latest .
+docker build -t idan1281/petclinic -t idan1281/petclinic:latest .
 
 # upload the docker image to docker hub
 docker login -u=idan1281 -p=01021981
