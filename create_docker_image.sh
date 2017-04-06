@@ -14,8 +14,8 @@ cd /tmp/docker
 docker build -t idan1281/petclinic -t idan1281/petclinic:latest_new .
 
 # upload the docker image to docker hub
-docker login -u=idan1281 -p=01021981
-docker push idan1281/petclinic:${JOB_NAME}${BUILD_NUMBER}
-docker push idan1281/petclinic:latest
+#docker login -u=idan1281 -p=01021981
+#docker push idan1281/petclinic:${JOB_NAME}${BUILD_NUMBER}
+#docker push idan1281/petclinic:latest
 
 
