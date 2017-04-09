@@ -5,10 +5,10 @@ pipeline {
       steps {
         sh '''echo PATH = ${PATH}
 echo M2_HOME = ${M2_HOME}
-. /etc/environment
 mvn clean
 
 '''
+        withMaven(jdk: '/usr/lib/jvm/java-8-openjdk-amd64/jre')
       }
     }
     stage('Build') {
