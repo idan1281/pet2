@@ -22,9 +22,16 @@ mvn install'''
         archiveArtifacts 'target/*.war'
       }
     }
-    stage('Creating Docker image') {
+    stage('Creating and Uploading Docker image') {
       steps {
         sh './create_docker_image.sh'
+      }
+    }
+    stage('Uploading the image to Docker Hub') {
+      steps {
+        sh '''docker login -u=idan1281 -p=01021981
+docker push idan1281/petclinic:${JOB_NAME}${BUILD_NUMBER}
+docker push idan1281/petclinic:latest'''
       }
     }
   }
