@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('initialize') {
       steps {
-        sh '''echo PATH = ${PATH}
+        sh '''export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
+echo PATH = ${PATH}
 echo M2_HOME = ${M2_HOME}
 mvn clean
 
 '''
-        withMaven(jdk: '/usr/lib/jvm/java-8-openjdk-amd64/jre')
       }
     }
     stage('Build') {
