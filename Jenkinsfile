@@ -30,7 +30,7 @@ mvn install'''
     stage('Uploading the image to Docker Hub') {
       steps {
         sh '''docker login -u=idan1281 -p=01021981
-docker push idan1281/petclinic:${JOB_NAME}${BUILD_NUMBER}
+docker push idan1281/petclinic:${BUILD_NUMBER}
 docker push idan1281/petclinic:latest'''
       }
     }
