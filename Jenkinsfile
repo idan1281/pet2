@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('initialize') {
       steps {
-        sh '''export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
+        sh '''export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 echo PATH = ${PATH}
 echo M2_HOME = ${M2_HOME}
 mvn clean
@@ -13,7 +13,8 @@ mvn clean
     }
     stage('Build') {
       steps {
-        sh 'mvn install'
+        sh '''export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+mvn install'''
       }
     }
     stage('artifact archiving') {
