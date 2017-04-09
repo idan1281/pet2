@@ -2,11 +2,11 @@
 
 #create the Dockerfile on /tmp/docker
 mkdir -p /tmp/docker
-cp /var/lib/jenkins/.m2/repository/org/springframework/samples/spring-petclinic/1.0.3-SNAPSHOT/*.war /tmp/docker/petclinic
+cp /var/lib/jenkins/.m2/repository/org/springframework/samples/spring-petclinic/1.0.3-SNAPSHOT/*.war /tmp/docker/petclinic.war
 cat <<EOF > /tmp/docker/Dockerfile
 FROM tomcat:8.0
 MAINTAINER "idan mishor <Idan1281@gmail.com>"/
-ADD ./*.war /usr/local/tomcat/webapps/
+ADD *.war /usr/local/tomcat/webapps/
 EOF
 
 # create the docker image
