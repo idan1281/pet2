@@ -25,5 +25,10 @@ mvn clean
         archiveArtifacts 'target/*.war'
       }
     }
+    stage('Creating Docker image') {
+      steps {
+        sh './create_docker_image.sh'
+      }
+    }
   }
 }
