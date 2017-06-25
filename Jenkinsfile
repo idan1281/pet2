@@ -9,6 +9,17 @@ pipeline {
     stage('Maven Clean Install') {
       steps {
         sh 'mvn clean install'
+        stash '*.war'
+      }
+    }
+    stage('Build status') {
+      steps {
+        echo 'Build finished succesfully'
+      }
+    }
+    stage('archive artifatct') {
+      steps {
+        archiveArtifacts(artifacts: '*.war', allowEmptyArchive: true)
       }
     }
   }
