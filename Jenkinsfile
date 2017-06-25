@@ -1,9 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('Clone git Repo') {
       steps {
         git(poll: true, branch: 'master', changelog: true, url: 'https://github.com/idan1281/pet2', credentialsId: 'idan1281@gmail.com')
+      }
+    }
+    stage('Maven Clean Install') {
+      steps {
+        sh 'mvn clean install'
       }
     }
   }
