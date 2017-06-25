@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Maven Clean Install') {
       steps {
-        sh 'mvn clean install'
+        sh '/opt/maven/bin/mvn clean install'
         stash '*.war'
       }
     }
