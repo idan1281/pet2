@@ -28,10 +28,14 @@ This project allows you to use the CI/CD procecss for deploying the Spring-Petcl
 
 ####	 Installing the docker host 
 2.	Save the ssh key file provided in the email to the location of your choice 
-	*  change it’s permissions to 0400 ( chmod 0400 $File_path )3.	cd into the repo/ansible folder, e.g pet2/ansible4.	execute: 
+	*  change it’s permissions to 0400 ( chmod 0400 $File_path )
+3.	cd into the repo/ansible folder, e.g pet2/ansible
+4.	execute: 
 
 		./launch_docker_host.sh
-	 5.	Enter the full path for the SSH key you saved in the first clause6.	Enter the password for the Ansible vault
+	 
+5.	Enter the full path for the SSH key you saved in the first clause
+6.	Enter the password for the Ansible vault
 7. **save the server's IP address so for future accessing the app.**
 
 
@@ -50,15 +54,25 @@ to manually trigger the build you need to:
 If all you want is to automatically deploy the app and using the previous build and release you can do it in 2 ways:
 
 1.	from the Jenkins console run the project "petclinic-build"
-2. cd into the repo/ansible folder, e.g pet2/ansible4.	execute: 
+2. cd into the repo/ansible folder, e.g pet2/ansible
+4.	execute: 
 
 		./run_container.sh
-	 5.	Enter the full path for the SSH key you saved in the first clause6.	Enter the password for the Ansible vault
+	 
+5.	Enter the full path for the SSH key you saved in the first clause
+6.	Enter the password for the Ansible vault
 
-		If you encounter the error: 		ERROR! Attempted to execute "/etc/ansible/ec2.py" as inventory script: Inventory script (/etc/ansible/ec2.py) had an execution error: Traceback (most recent call last):		File "/etc/ansible/ec2.py", line 128, in <module>		import boto		ImportError: No module named boto		It means that your Ansible can’t find your boto installation. It can usually resolved by setting an env variable named PYTHONPATH for the “site-packages” location on which python is installed in. for example: 		export PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages 7.	run the script again
+		If you encounter the error: 
+		ERROR! Attempted to execute "/etc/ansible/ec2.py" as inventory script: Inventory script (/etc/ansible/ec2.py) had an execution error: Traceback (most recent call last):
+		File "/etc/ansible/ec2.py", line 128, in <module>
+		import boto
+		ImportError: No module named boto
+		It means that your Ansible can’t find your boto installation. It can usually resolved by setting an env variable named PYTHONPATH for the “site-packages” location on which python is installed in. for example: 
+		export PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages 
+7.	run the script again
 
 ### Test the app
 * open a web browser, put in the IP address you saved from the "create a doker host" section, add :8888/petclinic to it ( e.g 10.0.0.10:8888/petclinic ) and you should see the petcilic wellcome page
 
 ## License and Authors
-Authors: Chen Cohen (idan.mishor@sap.com)
+Authors: Idan Mishor (idan.mishor@sap.com)
